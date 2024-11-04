@@ -1,5 +1,5 @@
 $date
-	Mon Nov  4 13:12:49 2024
+	Mon Nov  4 19:59:43 2024
 $end
 $version
 	Icarus Verilog
@@ -10,19 +10,21 @@ $end
 $scope module testbench $end
 $var wire 1 ! g $end
 $var wire 1 " f $end
-$var wire 1 # e $end
-$var wire 1 $ d $end
-$var wire 1 % c $end
-$var wire 1 & b $end
-$var wire 1 ' a $end
-$var reg 4 ( BCD [3:0] $end
+$var wire 1 # error $end
+$var wire 1 $ e $end
+$var wire 1 % d $end
+$var wire 1 & c $end
+$var wire 1 ' b $end
+$var wire 1 ( a $end
+$var reg 4 ) BCD [3:0] $end
 $scope module utt $end
-$var wire 4 ) BCD [3:0] $end
-$var reg 1 ' a $end
-$var reg 1 & b $end
-$var reg 1 % c $end
-$var reg 1 $ d $end
-$var reg 1 # e $end
+$var wire 4 * BCD [3:0] $end
+$var reg 1 ( a $end
+$var reg 1 ' b $end
+$var reg 1 & c $end
+$var reg 1 % d $end
+$var reg 1 $ e $end
+$var reg 1 # error $end
 $var reg 1 " f $end
 $var reg 1 ! g $end
 $upscope $end
@@ -33,78 +35,95 @@ $dumpall
 $end
 #0
 $dumpvars
+b0 *
 b0 )
-b0 (
+1(
 1'
 1&
 1%
 1$
-1#
+0#
 1"
 0!
 $end
 #10
-0'
-0$
-0#
-0"
-b1 (
-b1 )
-#20
-1'
+0(
 0%
-1$
-1#
-1!
-b10 (
-b10 )
-#30
-1%
-0#
-b11 (
-b11 )
-#40
-0'
 0$
-1"
-b100 (
-b100 )
-#50
-1'
+0"
+b1 )
+b1 *
+#20
+1(
 0&
+1%
 1$
-b101 (
-b101 )
-#60
-1#
-b110 (
-b110 )
-#70
+1!
+b10 )
+b10 *
+#30
 1&
 0$
-0#
-0"
-0!
-b111 (
-b111 )
-#80
-1$
-1#
+b11 )
+b11 *
+#40
+0(
+0%
 1"
-1!
-b1000 (
-b1000 )
-#90
-0#
-b1001 (
-b1001 )
-#100
+b100 )
+b100 *
+#50
+1(
 0'
-0&
+1%
+b101 )
+b101 *
+#60
+1$
+b110 )
+b110 *
+#70
+1'
 0%
 0$
 0"
 0!
-b1010 (
+b111 )
+b111 *
+#80
+1%
+1$
+1"
+1!
+b1000 )
+b1000 *
+#90
+0$
+b1001 )
+b1001 *
+#100
+1#
+0(
+0'
+0&
+0%
+0"
+0!
 b1010 )
+b1010 *
+#110
+b1011 )
+b1011 *
 #120
+b1100 )
+b1100 *
+#130
+b1101 )
+b1101 *
+#140
+b1110 )
+b1110 *
+#150
+b1111 )
+b1111 *
+#170
