@@ -15,3 +15,6 @@ A BCD to 7-Segment Decoder is a combinational circuit that takes a Binary Coded 
 | 8       | 1  | 0  | 0  | 0  | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
 | 9       | 1  | 0  | 0  | 1  | 1 | 1 | 1 | 1 | 0 | 1 | 1 |
 
+Waveform  
+![wew](https://github.com/AbhijitBaral/BCD_to_7-Segment/blob/master/imgs/waveform.png)
+
