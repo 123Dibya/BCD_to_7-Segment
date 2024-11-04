@@ -1,6 +1,6 @@
 module BCD_to_7Segment (BCD,a,b,c,d,e,f,g);
   input [3:0] BCD;    
-    output reg a, b, c, d, e, f, g;
+  output reg a, b, c, d, e, f, g;
 
   always @(BCD)
       begin
