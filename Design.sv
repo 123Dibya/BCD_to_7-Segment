@@ -1,6 +1,7 @@
-module BCD_to_7Segment (BCD,a,b,c,d,e,f,g);
+module BCD_to_7Segment (BCD,a,b,c,d,e,f,g,error);
   input [3:0] BCD;    
   output reg a, b, c, d, e, f, g;
+  output reg error=1'b0; 
 
   always @(BCD)
       begin
@@ -15,7 +16,11 @@ module BCD_to_7Segment (BCD,a,b,c,d,e,f,g);
             4'b0111: {a, b, c, d, e, f, g} = 7'b1110000;  
             4'b1000: {a, b, c, d, e, f, g} = 7'b1111111;  
             4'b1001: {a, b, c, d, e, f, g} = 7'b1111011;  
-            default: {a, b, c, d, e, f, g} = 7'b0000000;  
+            default:
+        begin
+                {a, b, c, d, e, f, g} = 7'b0000000;
+                error = 1;
+        end
         endcase
     end
 endmodule
